@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  padding-top: 50px; 
+}
+
+.feed-container {
+    display: block;
+	margin-top:20px;
+  }
+
+.feed-container::after {
+    clear: both;
+ }
+
+.feed-fieldset {
+    max-width: 600px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 10px;
+    border: 1px solid #808080;
+  }
+
+#searchTags {
+    height: 32px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+
+
+.feed-fig {
+    width: 250px;
+    margin: 5px;
+    display: inline-block;
+ }
+
+  .feed-img {
+    width: 240px;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: white;
+  }
+
+  .feed-cap {
+    width: 240px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .code-fieldset {
+    min-width: 0;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    border-bottom: 20px;
+    border: 1px solid #808080;
+    background-color: white;
+  }
+
+  .code-legend {
+    display: block;
+    width: auto;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 1px solid #808080;
+    background-color: white;
+  }
+
+  input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 5px 0px;
+    border: 1px solid #DDDDDD;
+  }
+
+  input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(30,44,210);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(30,44,210);
+  }
+
+  input[type=text]:invalid {
+    box-shadow: 0 0 5px rgb(187, 0, 0);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(187, 0, 0);
+  }
+
+  .code-pre {
+    overflow-y: hidden;
+    height: 110%;
+    background-color: transparent;
+  }
+
+  .syntaxhighlighter {
+    line-height: 140% !important;
+    font-size: 90% !important;
+  }
+
+  form {
+    margin-bottom: 15px;
+	padding: 30px 10px;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }

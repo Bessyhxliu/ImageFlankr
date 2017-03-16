@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" ng-app="imagesFlickr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search Images in Flickr Public Feed</title>
+    <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+  </head>
+
+<body>
+<div class="container main-content" >
+<section class="row" ng-controller="ImagesController">
+  <h3>Search Flickr Public Feed Images:</h3>
+  <article class="col-md-push-1 col-md-12">
+    <div class="feed-container">
+      <fieldset class="feed-fieldset">
+        <form name="form" class="validate-form">
+          <div class="form-group" >
+          	<input id="searchTags"
+                 ng-model="searchTags.tags"
+                 ng-target="form.tags"
+                 name="tags"
+                 type="text"
+                 title="input required"
+                 placeholder="Search tags separated by a comma."
+                 required />
+          </div>
+           <div class="form-group" >
+           <button type="submit" class="btn btn-primary" ng-click="search(searchTags);"> Search </button>
+          <input type="button" class="btn btn-default" ng-click="resetForm(form);" value="Reset" /> 
+         </div>
+        </form>
+      </fieldset>
+
+    </div>
+    <div id="message"></div>
+    
+    <div id="images" class="feed-container">
+      <h3 ng-show="images.items.length > 0">
+       {{images.title}}
+      </h3>
+      <figure class="feed-fig" ng-repeat="image in images.items">
+         <img class="feed-img" src="{{image.media.m}}" />
+        <figcaption class="feed-cap">{{image.title}} </figcaption> 
+      </figure>
+    </div>
+    
+</section>
+</div>
+
+	
+<script src="./libs/jquery/dist/jquery.min.js"></script>
+<script src="./libs/angular/angular.min.js"></script>
+<script src="./libs/angular-route/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+   
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div ng-view></div>
